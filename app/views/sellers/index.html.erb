@@ -1,4 +1,6 @@
 <h1>Growers & small producers</h1>
 <ul><%@sellers.each do |seller|%>
-<li><%=link_tp seller.name, seller_path(seller)%></li>
-<%end%></ul>
+<li><%= image_tag seller.image%><br>
+<%=link_to seller.name, seller_path(seller)%></li>
+<%end%>
+</ul>
