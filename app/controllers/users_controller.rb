@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     if @user.valid?
-      redirect_to user_path(@user)
+      redirect_to sellers_path
     else 
       render :new
     end
@@ -38,8 +38,8 @@ class UsersController < ApplicationController
 
   private
 
-  def user_params(*args)
-    params.require(:user).permit(*args)
+  def user_params
+    params.require(:user).permit(:username, :email, :password)
   end
 
   def find_user 
