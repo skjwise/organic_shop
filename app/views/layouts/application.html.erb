@@ -6,8 +6,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= link_to 'Log out', sessions_path, method: :delete%>
   </head>
-  <%= link_to 'Log out', sessions_path, method: "delete"%>
   <body>
     <%= yield %>
   </body>
