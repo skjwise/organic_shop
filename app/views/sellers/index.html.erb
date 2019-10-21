@@ -1,2 +1,4 @@
-<h1>Sellers#index</h1>
-<p>Find me in app/views/sellers/index.html.erb</p>
+<h1>Growers & small producers</h1>
+<ul><%@sellers.each do |seller|%>
+<li><%=link_tp seller.name, seller_path(seller)%></li>
+<%end%></ul>
