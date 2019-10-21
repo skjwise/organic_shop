@@ -10,8 +10,23 @@
 User.create(username: 'Sarah', password_digest: "password1", email: 'one@gmail.com' )
 User.create(username: 'Ilita', password_digest: "password2", email: 'two@gmail.com' )
 
-Seller.create(name: 'freshFields', email: 'fields@gmaill.com', image: 'fields', description: 'locally grown' )
-Seller.create(name: 'Pickle', email: 'pickle@gmaill.com', image: 'sour', description: 'organic' )
+Seller.create(name: 'mandy johnson', email: 'fields@gmaill.com', image: 'https://www.riverford.co.uk/media/about-us/kitchen-pantry.jpg', description: 'l
+    Our mayonnaise is made in Ashburton, Devon by Mandy and Andy Johnson from Laydilay. They’ve been producing organic eggs since April 2004 with 70 mid lay hens in a small rented orchard in Buckfastleigh.' )
+Seller.create(name: 'Cropwell Bishop', email: 'pickle@gmaill.com', image: 'https://www.riverford.co.uk/media/about-us/cheese_cropwell_bishop_stilton.jpg', description: '
+    Our stilton cheese comes from Luke Chapman at Cropwell Bishop Creamery in the Vale of Belvoir, eight miles from Nottingham.' )
+Seller.create(name: 'Andy Hayllor', email: 'andy@gmail.com', image: 'https://www.riverford.co.uk/media/about-us/andy_haylor.jpg ', description: 'One of Guy Watson’s neighbours is Andy Hayllor, who farms around 800 acres of the rolling south Devon hills and supplies Riverford with a wide range of veg for their boxes as well as free-range organic chickens for the table')
+Seller.create(name: 'Anthony & Mary Lou Coker', email: 'anto@yahoo.com', image: 'https://www.riverford.co.uk/media/about-us/wash-anthony-coker.jpg', description: 'The main crops grown at Home Park Farm are the great Brussels sprouts we provide at Christmas, kale, parsnips, leeks, squash and courgettes. He loves growing all of them, but the sprouts are his favourite. Anthony claims he wouldn't grow anything he doesn't like to eat and has been working with Guy as part of the South Devon Organic Producer co-op right from the start.')
+Seller.create(name: 'Ian & Alison Samuel', email: 'samuel.yahoo.com', image: 'https://www.riverford.co.uk/media/about-us/wash-ian-and-alison.jpg', description: 'They run a traditional mixed farm, with both livestock and vegetables, which minimises outside inputs because the muck from the stock can be used to fertilise the crops, and the crops feed the animals.Alongside fields of carrots, cabbages, purple sprouting broccoli, beetroot, leaks and broad beans – all of which find their way into the boxes - they have a small beef fattening herd and some free-range chickens')
+Seller.create(name: 'Peter Richardson - Home Farm', email: 'farms@hotmail.com', image: 'https://www.riverford.co.uk/media/about-us/home-peter-richardson.jpg', description: 'The key to success is being strict about crop rotation. “With conventional farming, you could plant potatoes in the same place every three years but with organic methods it’s once every seven years. You don’t want the pests and soil-borne diseases.')
+Seller.create(name: 'Bettina and Enrique Scholtz, Agro Roca', email: 'bettina@gmail.com', image: '', description: ' ')
+Seller.create(name: ' ', email: ' ', image: ' ', description: ' ')
+Seller.create(name: ' ', email: ' ', image: ' ', description: ' ')
+Seller.create(name: ' ', email: ' ', image: ' ', description: ' ')
+Seller.create(name: ' ', email: ' ', image: ' ', description: ' ')
+Seller.create(name: ' ', email: ' ', image: ' ', description: ' ')
+Seller.create(name: ' ', email: ' ', image: ' ', description: ' ')
+Seller.create(name: ' ', email: ' ', image: ' ', description: ' ')
+Seller.create(name: ' ', email: ' ', image: ' ', description: ' ')
 
 Product.create(name: 'Beetroot', price: 2, image: 'beetroot', seller_id: Seller.first.id)
 Product.create(name: 'cucumber', price: 1, image: 'cucmber', seller_id: Seller.last.id)
