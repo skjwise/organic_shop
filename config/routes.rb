@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'carts/index'
+
+  get 'carts/show'
+
   resources :sellers
   resources :users
   resources :orders
