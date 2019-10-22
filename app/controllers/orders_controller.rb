@@ -16,10 +16,4 @@ class OrdersController < ApplicationController
 
   def destroy
   end
-
-  def add_to_cart
-    @product = Product.find(params[:id])
-    current_cart << @product.id
-    session[:cart] =  cart
-
 end

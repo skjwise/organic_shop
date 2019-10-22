@@ -18,7 +18,8 @@ class ApplicationController < ActionController::Base
         end
     end
 
-  def current_order
+    def current_cart
       session[:cart] ||= []
-  end
+    end
+
   end

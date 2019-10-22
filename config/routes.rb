@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'carts/index'
-
-  get 'carts/show'
 
   resources :sellers
   resources :users
@@ -18,6 +15,8 @@ Rails.application.routes.draw do
   delete '/remove', to: 'orders#destroy'
 
   root to: 'organic#index'
+
+  post '/add_to_cart', to: 'carts#add_to_cart', as: 'add_path'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
