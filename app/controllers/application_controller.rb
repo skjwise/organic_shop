@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-    helper_method :current_user, :authorize_user
+    helper_method :current_user, :authorize_user, :current_cart
     # add_flash_types :error, :notice
     
     def current_user
@@ -18,4 +18,7 @@ class ApplicationController < ActionController::Base
         end
     end
 
-end
+  def current_order
+      session[:cart] ||= []
+  end
+  end

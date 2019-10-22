@@ -1,11 +1,13 @@
+<br><%=link_to 'Back', sellers_path%>
+
 <h2><%=@seller.name%></h2>
 <p><%=@seller.description%></p>
 
 <h5>Contact:<%=@seller.email%></h5>
 
 <% @seller.products.each do |product| %>
-<%= product.name %><br>
+<%= link_to product.name, product_path(product) %><br>
 <%= image_tag product.image, style: 'height:10%; width:20%;' %>
 <% end %><br><br>
 
-<%=link_to 'Back', sellers_path%>
+
