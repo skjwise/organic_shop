@@ -6,8 +6,8 @@ class User < ApplicationRecord
 
     validates :username, presence: true
     validates :username, uniqueness: true
-    # validates :password, presence: true
+    validates :password, presence: true
     validates :email, presence: true
     validates :email, uniqueness: true
-    # validates_format_of :email, with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
+    validates_format_of :email, with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
 end
