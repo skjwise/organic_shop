@@ -12,12 +12,16 @@
    <% if flash[:notice]%>
   <h2><%= flash[:notice]%>
   <% end %>
+
    <% if current_user %>
   <h5>Hi, <%=current_user.username%>!</h5>
-  <%= link_to 'Logout', '/logout', method: :delete %>
+  <%= link_to 'Logout', '/logout', method: :delete %><br>
+  <%= link_to 'Edit profile', edit_user_path(current_user.id) %>
+
     <%# <% else %>
   <%# <%= link_to 'Login', '/login' %> 
   <% end %>
+
     <%= yield %>
   </body>
 </html>

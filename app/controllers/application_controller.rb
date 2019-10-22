@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
     # add_flash_types :error, :notice
     
     def current_user
+      # byebug
         if session[:user_id]
           
         User.find(session[:user_id])
