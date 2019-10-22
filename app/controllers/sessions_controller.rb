@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     # byebug
     @user = User.find_by(email: params[:user][:email])
     # byebug
-    if @user && @user.authenticate(params[:user][:password_])
+    if @user && @user.authenticate(params[:user][:password])
         session[:user_id] = @user.id
         redirect_to sellers_path
         
