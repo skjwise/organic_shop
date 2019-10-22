@@ -3,4 +3,12 @@
 
 <h5>Contact:<%=@seller.email%></h5>
 
+<% @seller.products.each do |product| %>
+    <h4>Products:</h4>
+    <p>
+    <%= product.name %><br>
+    <%= product.price %>
+    </p>
+<% end %>
+
 <%=link_to 'Back', sellers_path%>
