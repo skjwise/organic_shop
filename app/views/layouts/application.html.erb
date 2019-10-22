@@ -9,11 +9,14 @@
 
   </head>
   <body>
+   <% if flash[:notice]%>
+  <h2><%= flash[:notice]%>
+  <% end %>
    <% if current_user %>
   <h5>Hi, <%=current_user.username%>!</h5>
   <%= link_to 'Logout', '/logout', method: :delete %>
-  <% else %>
-  <%= link_to 'Login', '/login' %>
+    <%# <% else %>
+  <%# <%= link_to 'Login', '/login' %> 
   <% end %>
     <%= yield %>
   </body>
