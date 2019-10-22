@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     # byebug
     if @user.valid?
+      session[:user_id] = @user.id
       redirect_to sellers_path
     else 
       render :new
@@ -14,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    find_user
+    @user = find_user
   end
 
   def edit

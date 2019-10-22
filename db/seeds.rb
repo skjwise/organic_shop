@@ -5,11 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Order.destroy_all
+OrderItem.destroy_all
 User.destroy_all
 Seller.destroy_all
 Product.destroy_all
-Order.destroy_all
-OrderItem.destroy_all
+
 
 User.create(username: 'Sarah', password: "password1", email: 'one@gmail.com' )
 User.create(username: 'Ilita', password: "password2", email: 'two@gmail.com' )
@@ -29,15 +30,15 @@ Seller.create(name: 'Jonathon Smales - Lyburn Farm', email: 'smales@gmail.com', 
 Seller.create(name: 'Mike Fisher - Northdown Orchard', email: 'fisher@gmail.com', image: 'https://www.riverford.co.uk/media/about-us/norton-mike-fisher.jpg', description: '“This isn’t the best growing land,” he admits. “It’s very thin, chalky soil. But with clover lays and green cover crops I’m gradually building the fertility. And it’s working. Every year it seems to get easier to plough, and biological pest controls seem less and less necessary as the natural balance between pests and beneficial predators establishes itself.')
 
 
-Product.create(name: 'Beetroot', price: 2, image: 'https://images.unsplash.com/photo-1527790806964-dfa3c2c7e032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=678&q=80', seller_id: Seller.first.id)
-Product.create(name: 'CucumberS', price: 1, image: 'https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1334&q=80', seller_id: Seller.last.id)
-Product.create(name: 'Tomatoes', price: 2, image: 'hhttps://images.unsplash.com/photo-1555704574-f9ecf4717298?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80', seller_id: Seller.first.id)
-Product.create(name: 'Peppers', price: 2, image: 'https://images.unsplash.com/photo-1506810487030-e7f94a5eef74?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80', seller_id: Seller.first.id)
-Product.create(name: 'Asparagus', price: 2, image: 'https://images.unsplash.com/photo-1555704574-f9ecf4717298?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80', seller_id: Seller.first.id)
-Product.create(name: 'Cauliflowers', price: 2, image: 'https://images.unsplash.com/photo-1510627498534-cf7e9002facc?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', seller_id: Seller.first.id)
-Product.create(name: 'Radishes', price: 2, image: 'https://images.unsplash.com/photo-1504945005722-33670dcaf685?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80', seller_id: Seller.first.id)
-Product.create(name: 'PakChoi', price: 2, image: 'https://images.unsplash.com/photo-1511993226957-cd166aba52d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=686&q=80', seller_id: Seller.first.id)
-Product.create(name: 'Aubergine', price: 2, image: 'https://images.unsplash.com/photo-1560951812-58e6bce53149?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2736&q=80', seller_id: Seller.first.id)
+Product.create(name: 'Beetroot', price: 3, image: 'https://images.unsplash.com/photo-1527790806964-dfa3c2c7e032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=678&q=80', seller_id: Seller.all.sample.id)
+Product.create(name: 'Cucumbers', price: 1, image: 'https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1334&q=80', seller_id: Seller.all.sample.id)
+Product.create(name: 'Tomatoes', price: 2, image: 'https://images.unsplash.com/photos/dJHdolN553o', seller_id: Seller.all.sample.id)
+Product.create(name: 'Peppers', price: 2, image: 'https://images.unsplash.com/photo-1506810487030-e7f94a5eef74?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80', seller_id: Seller.all.sample.id)
+Product.create(name: 'Asparagus', price: 3, image: 'https://images.unsplash.com/photo-1555704574-f9ecf4717298?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80', seller_id: Seller.all.sample.id)
+Product.create(name: 'Cauliflowers', price: 2, image: 'https://images.unsplash.com/photo-1510627498534-cf7e9002facc?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', seller_id: Seller.all.sample.id)
+Product.create(name: 'Radishes', price: 1, image: 'https://images.unsplash.com/photo-1504945005722-33670dcaf685?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80', seller_id: Seller.all.sample.id)
+Product.create(name: 'PakChoi', price: 3, image: 'https://images.unsplash.com/photo-1511993226957-cd166aba52d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=686&q=80', seller_id: Seller.all.sample.id)
+Product.create(name: 'Aubergine', price: 2, image: 'https://images.unsplash.com/photo-1560951812-58e6bce53149?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2736&q=80', seller_id: Seller.all.sample.id)
 
 Order.create(user_id: User.first.id, total: 0)
 Order.create(user_id: User.last.id, total: 0)
