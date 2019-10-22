@@ -4,11 +4,8 @@
 <h5>Contact:<%=@seller.email%></h5>
 
 <% @seller.products.each do |product| %>
-    <h4>Products:</h4>
-    <p>
-    <%= product.name %><br>
-    <%= product.price %>
-    </p>
-<% end %>
+<%= product.name %><br>
+<%= image_tag product.image, style: 'height:10%; width:20%;' %>
+<% end %><br><br>
 
 <%=link_to 'Back', sellers_path%>

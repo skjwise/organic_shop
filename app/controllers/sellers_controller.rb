@@ -12,4 +12,5 @@ class SellersController < ApplicationController
 
   def create
   end
+
 end
