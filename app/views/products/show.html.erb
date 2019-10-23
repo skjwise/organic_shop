@@ -2,3 +2,4 @@
   <h2><%= @product.name %> </h2>
 
 <%= button_to "Add to cart", "/add_to_cart", method: :post, params: { product_id: @product.id } %>
+
