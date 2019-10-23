@@ -8,7 +8,6 @@ class CartsController < ApplicationController
   def add_to_cart
     # @product = Product.find(params[:product_id])
     if current_cart << params[:product_id].to_i
-      byebug
       redirect_to sellers_path
       end
     end
