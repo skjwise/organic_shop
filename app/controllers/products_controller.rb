@@ -8,12 +8,4 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
-  def create 
-    byebug
-  end
-
-  def update 
-    byebug
-  end 
-
 end

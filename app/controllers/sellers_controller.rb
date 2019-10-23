@@ -16,10 +16,5 @@ class SellersController < ApplicationController
   #   #[5, 67, 2]
   # end
 
-  def new
-  end
-
-  def create
-  end
 
 end
