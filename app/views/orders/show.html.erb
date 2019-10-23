@@ -1,4 +1,13 @@
 <h1>Order Confirmation</h1>
 
+<% if @order_items.any? %>
+    <% @order_items.each do |item| %>
+        <p><%= item.product.name %> | <%= link_to 'Delete', order_item_path(item), :data => {confirm => "You sure?", :method => "delete"} %>
+    <% end %>
+        <p>Your Total: £<%= current_order.total_price %></p>
+    <% else %>
+        <p>Your Shopping Cart is Empty!</p>
+<% end %>
 
-<h4>Thank You for shopping!</h4>
+<%= button_to 'Checkout'%>
+<h5>Thank You for shopping!</h5>
