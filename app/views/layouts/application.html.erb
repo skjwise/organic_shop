@@ -15,6 +15,7 @@
 
    <% if current_user %>
   <h5>Hi, <%=current_user.username%>!</h5>
+  <%= "Cart (#{current_cart.length})"%><br>
   <%= link_to 'Logout', '/logout', method: :delete %><br>
   <%= link_to 'Edit profile', edit_user_path(current_user.id) %>
 
