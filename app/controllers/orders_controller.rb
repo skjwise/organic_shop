@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   def show
+    #page to confirm order items and have a checkout option
   end
 
   def new
