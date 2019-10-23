@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   post '/add', to: 'orders#add'
-  delete '/remove', to: 'order_items#destroy', as: 'remove'
+  delete '/remove/:id', to: 'order_items#destroy', as: 'remove'
 
-  root to: 'organic#index'
+  root to: 'sellers#index'
 
   post '/add_to_cart', to: 'carts#add_to_cart', as: 'add_path'
 
