@@ -6,10 +6,11 @@
 <div class="well">
   <div class="row">
     <div class="col-xs-8">
-    
+
 <h4><% @seller.products.each do |product| %></h4>
-<%= product.name %><br>
-<%= button_to "Add to cart", "/add_to_cart", method: :post, params: { product_id: product.id } %>
+<h4 class="text-right"><%= product.name %><br>
+<h4 class="text-right">Unit Price: £  <span style="color: green"><%= product.price %>.00</span></h4>
+<h4 class="text-right"><%= button_to "Add to cart", "/add_to_cart", method: :post, params: { product_id: product.id } %>
 <%= image_tag product.image, style: 'height:10%; width:20%;' %>
 <% end %><br><br>
 <h5>Contact:<%=@seller.email%></h5>
