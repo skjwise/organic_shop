@@ -6,11 +6,14 @@ class OrderItemsController < ApplicationController
 
 
   def destroy
-    item = session[:cart].map{|id| Product.find(id)}
-    byebug
-     @item.destroy
-     item.save
-    redirect_to order_item_path
+    # item = session[:cart].map{|id| Product.find(id)}
+    # byebug
+    #  @item.destroy
+    #  item.save
+    
+    item = session[:cart].destroy(params[:id])
+    redirect_to sellers_path
+
    end
 
    def order_items_parans
