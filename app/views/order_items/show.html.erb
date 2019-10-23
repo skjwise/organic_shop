@@ -1,5 +1,10 @@
+
 <h1>Your ordered goodies here:</h1>
+<% if @order_items.any? %>
     <% @order_items.each do |item|%>
+    <p><%=item.name%> | <%=link_to 'Remove', remove_path(item), :method => "delete" %>
+    <%end%><p>
+    <%end%>
     
     
 
