@@ -7,7 +7,7 @@
     <%= text_field :user, :email %>
     <%= label :user, :password %>
     <%= password_field :user, :password %>
+    <label><input type="checkbox"> Remember me</label><br><br>
     <%= submit_tag "Login" %>
 <% end %>
 
-<%= button_to 'Back', new_user_path, :method => 'get' %>

@@ -12,17 +12,15 @@
    <% if flash[:notice]%>
   <h2><%= flash[:notice]%>
   <% end %>
+      
+  <%= render 'layouts/navigation' %>
+
 
    <% if current_user %>
-  <h5>Hi, <%=current_user.username%>!</h5>
-  <%= "Cart (#{current_cart.length})"%><br>
-  <%= link_to 'Logout', '/logout', method: :delete %><br>
+  <h3>Hi, <%=current_user.username%>!</h3>
   <%= link_to 'Edit profile', edit_user_path(current_user.id) %>
-
-    <%# <% else %>
-  <%# <%= link_to 'Login', '/login' %> 
   <% end %>
-    <%= render 'layouts/navigation' %>
-    <%= yield %>
+
+  <%= yield %>
   </body>
 </html>
