@@ -4,9 +4,9 @@
 <p><%=@seller.description%></p>
 
 <h5>Contact:<%=@seller.email%></h5>
-
 <% @seller.products.each do |product| %>
-<%= link_to product.name, product_path(product) %><br>
+<%= product.name %><br>
+<%= button_to "Add to cart", "/add_to_cart", method: :post, params: { product_id: product.id } %>
 <%= image_tag product.image, style: 'height:10%; width:20%;' %>
 <% end %><br><br>
 

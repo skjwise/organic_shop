@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :orders
   resources :products
   resources :order_items
+  resources :carts
   # resources :sessions
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
   root to: 'sellers#index'
 
   post '/add_to_cart', to: 'carts#add_to_cart', as: 'add_path'
+  get '/cart', to: 'carts#show', as: 'cart_path'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
