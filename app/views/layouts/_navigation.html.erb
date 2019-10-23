@@ -16,7 +16,7 @@
             <a class="btn btn-default" href="/logout" role="button" value="delete">Logout</a>
         <% end %>
         <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-        <%= link_to "Cart (#{current_cart.length})", cart_path(current_cart) %><br>
+        <%= link_to "Cart #{current_cart.length}", cart_path %><br>
 
     </div>
 
