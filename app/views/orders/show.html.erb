@@ -1,6 +1,6 @@
 <h1>Order Confirmation</h1>
 
-<% if @order_items.any? %>
+<% if @current_order.any? %>
     <% @order_items.each do |item| %>
         <p><%= item.product.name %> | <%= link_to 'Delete', order_item_path(item), :data => {confirm => "You sure?", :method => "delete"} %>
     <% end %>

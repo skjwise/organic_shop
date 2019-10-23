@@ -7,7 +7,7 @@ class Order < ApplicationRecord
 
 
     def total_price
-        self.order_items.map {|product| product.price }.sum
+        self.order_items.map {|item| item.products.price }.sum
     end
 
     private 
