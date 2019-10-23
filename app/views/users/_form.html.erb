@@ -13,7 +13,11 @@
 <% end %>
 
 
-<%= form_for @user do |f| %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+
+  <%= form_for @user do |f| %>
     <%= f.label :username %>
     <%= f.text_field :username %>
 
@@ -24,5 +28,8 @@
     <%= f.text_field :email %>
 
     <%= f.submit %>
-<% end %>
 
+    <% end %>
+    </div>
+  </div> 
+</div>
