@@ -1,2 +1,14 @@
-<h1>Carts#show</h1>
-<p>Find me in app/views/carts/show.html.erb</p>
+
+<h1>Your ordered goodies here:</h1>
+<% if @order_items.any? %>
+    <% @order_items.each do |item|%>
+    <p><%=item.name%> | <%=link_to 'Remove', remove_path(item), :method => "delete" %>
+    <%end%><p>
+    <%end%>
+
+
+<%= link_to 'Back to veggies', sellers_path() %>
+<%= link_to 'Confirm Order', order_path %>
+
+<%= button_to 'Checkout'%>
+<h5>Thank You for shopping!</h5>
