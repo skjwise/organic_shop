@@ -14,18 +14,6 @@ class OrderItem < ApplicationRecord
 
     private 
 
-    # def product_present
-    #     if product.nil?
-    #         errors.add(:product, "is not valid.")
-    #     end 
-    # end 
-
-    # def order_present
-    #     if order.nil?
-    #         errors.add(:order, "is not a valid order.")
-    #     end
-    # end
-
     def update_total
         self.total_price = total_price
     end
