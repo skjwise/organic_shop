@@ -1,5 +1,17 @@
-<div><h3>summary of your order:</h3></div>
-<% @order.products.each do |product| %>
-    <%= product.id %>
-<% end %>
 
+
+<div class="well">
+  <div class="row">
+    <div class="col-xs-8">
+<div><h3 class="text-center">summary of your order:</h3></div>
+<% @order.products.each do |product| %>
+   <h4 class="text-center"> <div><%= product.name %> || £<%= product.price %>.00
+
+<%end%>
+<h4>Total items:  <span style="color: green"><%= @order.products.ids.size%></h4>
+<h4>SubTotal price: £ <span style="color: green"><%=@order.products.sum{|m| m.price}%>.00</h4>
+</div>
+
+   </div>
+  </div>
+</div>
