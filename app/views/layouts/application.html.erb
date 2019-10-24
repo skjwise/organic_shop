@@ -17,7 +17,7 @@
 
 
    <% if current_user %>
-  <h3>Hi, <%=current_user.username%>!</h3>
+  <h3>Hi, <%=current_user.username.capitalize%>!</h3>
   <%= link_to 'Edit profile', edit_user_path(current_user.id) %>
   <% end %>
 
