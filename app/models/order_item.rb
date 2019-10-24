@@ -9,30 +9,22 @@ class OrderItem < ApplicationRecord
     validate :order_present
 
     def total_price
-        self.order_items.map {|item| item.products.price * item.quantity }.sum
+        total = order.quantity * order.product.price
     end
 
     private 
 
-    # def update_status
-    #     if self.status == nil
-    #         self.status = "In Progress"
-    #     else
-    #         self.status = "Completed!"
+    # def product_present
+    #     if product.nil?
+    #         errors.add(:product, "is not valid.")
+    #     end 
+    # end 
+
+    # def order_present
+    #     if order.nil?
+    #         errors.add(:order, "is not a valid order.")
     #     end
     # end
-
-    def product_present
-        if product.nil?
-            errors.add(:product, "is not valid.")
-        end 
-    end 
-
-    def order_present
-        if order.nil?
-            errors.add(:order, "is not a valid order.")
-        end
-    end
 
     def update_total
         self.total_price = total_price
