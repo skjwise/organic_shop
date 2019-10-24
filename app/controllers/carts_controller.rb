@@ -23,11 +23,13 @@ class CartsController < ApplicationController
       products = current_cart.map {|id| Product.find(id)}
 
         products.each do |product|
-        @cart = OrderItem.create(order_id: order.id, product_id: product.id, quantity: 1)
+        @cart = OrderItem.create(order_id: @order.id, product_id: product.id, quantity: 1)
         # byebug
-      end
-      redirect_to order_path(products)
+        end
+       redirect_to order_path(@order.id)
     end
+
+
       # iterate through product ids in the cart
       # for each one create a new order item that belongs to the order that we just created and that product
   
