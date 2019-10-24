@@ -11,6 +11,7 @@
 <h4>Total items:  <span style="color: green"><%= @order.products.ids.size%></h4>
 <h4>SubTotal price: £ <span style="color: green"><%=@order.products.sum{|m| m.price}%>.00</h4>
 </div>
+<a href="/pay" class="button type="button" class="btn btn-outline-primary">Pay</button></a>
 
    </div>
   </div>

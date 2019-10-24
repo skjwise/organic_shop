@@ -28,7 +28,8 @@ class CartsController < ApplicationController
         end
        redirect_to order_path(@order.id)
     end
-
+      def pay
+      end
 
       # iterate through product ids in the cart
       # for each one create a new order item that belongs to the order that we just created and that product
