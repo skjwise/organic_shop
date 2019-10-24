@@ -8,7 +8,7 @@ class CartsController < ApplicationController
   def add_to_cart
     # @product = Product.find(params[:product_id])
     if current_cart << params[:product_id].to_i
-      byebug
+      # byebug
       redirect_to sellers_path
       end
     end
@@ -19,6 +19,16 @@ class CartsController < ApplicationController
     end
 
     def checkout
+      @order = Order.create(user_id: current_user.id)
+      products = current_cart.map {|id| Product.find(id)}
+
+        products.each do |product|
+        @cart = OrderItem.create(order_id: order.id, product_id: product.id, quantity: 1)
+        # byebug
+      end
+      redirect_to order_path(products)
     end
+      # iterate through product ids in the cart
+      # for each one create a new order item that belongs to the order that we just created and that product
   
   end
