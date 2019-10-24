@@ -19,12 +19,6 @@ class CartsController < ApplicationController
     end
 
     def checkout
-      byebug
-      order = Order.create(user_id: current_user.id)
-      order = OrderItem.create(order_id:  order.id, o )
-      # iterate through product ids in the cart
-      # for each one create a new order item that belongs to the prder that we just created and that product
-
     end
   
   end
