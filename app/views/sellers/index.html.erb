@@ -7,7 +7,8 @@
 }
 .column {
   float: left;
-  width: 33.33%;
+  width: 50%;
+  height: 50%;
   padding: 5px;
 }
 /* Clearfix (clear floats) */
@@ -16,9 +17,9 @@
   clear: both;
   display: table;
 }
-.img {
-    height: 50px;
-    width: 50px;
+.column-img {
+    height: 250px;
+    width: 250px;
 }
 </style>
 </head>
@@ -29,7 +30,7 @@
   <div class='row'>
     <% group.each do |seller| %>
       <div class='col-md-3'>
-        <%= image_tag(seller.image) %>
+        <img class="column-img" src=<%= seller.image %> >
         <h4><%= link_to seller.name, seller_path(seller) %></h4>
       </div>
     <% end %>

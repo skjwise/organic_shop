@@ -33,8 +33,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
             <a class="btn btn-default pull-right" href="/users/new" role="button">Sign up</a>
             <a class="btn btn-default pull-right" href="/login" role="button">Login</a>
             <% else %>
-            <a class="btn btn-default" href="/logout" role="button" value="delete">Logout</a>
-            <a class="btn btn-default" href="/history" role="button" value="delete">Order History</a>
+            <a class="btn btn-default pull-right" href="/logout" role="button" value="delete">Logout</a>
+            <a class="btn btn-default pull-right" href="/history" role="button" value="delete">Order History</a>
             <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
             <%= link_to "Cart (#{current_cart.length})", cart_path(current_cart)%><br> 
         <% end %>
