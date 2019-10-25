@@ -16,12 +16,22 @@
   clear: both;
   display: table;
 }
+.img {
+    height: 50px;
+    width: 50px;
+}
 </style>
 </head>
 <body>
+
 <h1>Producers</h1>
-<ul><%@sellers.each do |seller| %>
-<li><%= image_tag seller.image %></li>
-<%=link_to seller.name, seller_path(seller) %>
-<%end%>
-</ul>
+<% @sellers.in_groups_of(3, false).each do |group| %>
+  <div class='row'>
+    <% group.each do |seller| %>
+      <div class='col-md-3'>
+        <%= image_tag(seller.image) %>
+        <h4><%= link_to seller.name, seller_path(seller) %></h4>
+      </div>
+    <% end %>
+  </div>
+<% end %>
