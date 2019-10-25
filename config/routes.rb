@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
 
 
-  resources :sellers
+  resources :sellers, only: [:index, :show]
   resources :users
-  resources :orders
-  resources :products
-  resources :order_items
-  # resources :carts
-  # resources :sessions
+  resources :orders, only: [:show, :create]
+  resources :order_items, only:[:show]
+
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'

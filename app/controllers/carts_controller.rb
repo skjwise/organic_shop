@@ -1,5 +1,7 @@
 class CartsController < ApplicationController
   helper_method :seller_products
+  before_action :authorize_user
+
   def show
     @order_items = current_cart.order_items
     @order_items = current_cart.map{|id| Product.find(id)}

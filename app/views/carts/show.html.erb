@@ -9,14 +9,14 @@
 
     <% @order_items.each do |item|%>
     <p><%=item.name%> | <%=link_to 'Remove', remove_path(item), :method => "delete" %>
-    <%= button_to 'Checkout'%>
     <%end%><p>
+    <%= button_to 'Checkout'%>
     <%else%>
-  <div><h3 class="text-center">You have not put goddies to your cart yet.</h3>
+  <div><h3 class="text-center">You have not put goodies to your cart yet.</h3>
     <%end%>
 
 
-<%= link_to 'Back to veggies', sellers_path %>
+<%= link_to 'Back to Producers', sellers_path %>
 <%# <%= link_to 'Confirm Order', order_path() %> 
 
 
