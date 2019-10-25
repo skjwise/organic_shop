@@ -3,10 +3,16 @@
   <div class="row">
   <div class="col-xs-8">
 
+   <% if @order.products.length > 0 %>
+
   <div><h3 class="text-center">Previous orders:<br><br>
   <% @order.products.each do |product| %>
   <h4 class="text-center"> <div><%= product.name %>
   <%end%>
+
+  <%else%>
+  <h3 class="text-center">You have not placed any orders whith us yet :(
+      <%end%>
 
 
   </div>
