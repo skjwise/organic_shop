@@ -1,3 +1,19 @@
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+.navbar {
+  width: 100%;
+  overflow: auto;
+}
+.navbar a {
+  float: left;
+  padding: 12px;
+  font-size: 17px;
+}
+.navbar-header{
+  margin-left:5px;
+  width:100%;
+}
+</style>
 
 <nav class="navbar navbar-default">
 <div class="container-fluid" id="nav_center">
@@ -14,8 +30,8 @@
       <a class="navbar-brand" href="#"><span style="color: green"><b>Organic Foods</b></a>
 
         <% if current_user == session[:user_id] %>
-            <a class="btn btn-default" href="/users/new" role="button">Sign in</a>
-            <a class="btn btn-default" href="/login" role="button">Login</a>
+            <a class="btn btn-default pull-right" href="/users/new" role="button">Sign up</a>
+            <a class="btn btn-default pull-right" href="/login" role="button">Login</a>
             <% else %>
             <a class="btn btn-default" href="/logout" role="button" value="delete">Logout</a>
             <a class="btn btn-default" href="/history" role="button" value="delete">Order History</a>
