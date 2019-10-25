@@ -13,7 +13,7 @@
    <div class="input-group">
 
    
-    <h4 class="text-right">Quantity <%= number_field :quantity, value: 1, class: "form-control", min: 1 %>
+    <h4 class="text-right">Quantity <%= number_field :quantity, value: 1, class: "form-control", min: 1 , max: 5%>
     <%# <%= hidden_field :order_item, value: quantity %> 
 
   <h4 class="text-right"><%= button_to "Add to cart", "/add_to_cart", method: :post, params: { product_id: product.id } %>
