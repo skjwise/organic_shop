@@ -20,49 +20,8 @@
 </head>
 <body>
 <h1>Producers</h1>
-<%# <ul><%@sellers.each do |seller|%> 
-<div class="row">
-  <div class="column">
-    <img src="https://www.riverford.co.uk/media/about-us/kitchen-pantry.jpg" alt="Mandy Johnson" style="width:50%">
-    <%=link_to seller.name, seller_path(seller)%>
-  </div>
-  <div class="column">
-    <img src="https://www.riverford.co.uk/media/about-us/cheese_cropwell_bishop_stilton.jpg" alt="Cropwell Bishop" style="width:50%">
-    <%=link_to seller.name, seller_path(seller)%>
-  </div>
-    <div class="column">
-    <img src="https://www.riverford.co.uk/media/about-us/andy_haylor.jpg" alt="Andy Hayllor" style="width:50%">
-    <%=link_to seller.name, seller_path(seller)%>
-  </div>
-</div>
-  <div class="row">
-  <div class="column">
-    <img src="https://www.riverford.co.uk/media/about-us/wash-anthony-coker.jpg" alt="Anthony & Mary Lou Coker" style="width:50%">
-    <%=link_to seller.name, seller_path(seller)%>
-  </div>
-  <div class="column">
-    <img src="https://www.riverford.co.uk/media/about-us/wash-ian-and-alison.jpg" alt="Ian & Alison Samuel" style="width:50%">
-    <%=link_to seller.name, seller_path(seller)%>
-  </div>
-  <div class="column">
-    <img src="https://www.riverford.co.uk/media/about-us/home-peter-richardson.jpg" alt="Peter Richardson - Home Farm" style="width:50%">
-    <%=link_to seller.name, seller_path(seller)%>
-  </div>
-
-<%# <%=link_to seller.name, seller_path(seller)%> 
-</div>
+<ul><%@sellers.each do |seller| %>
+<li><%= image_tag seller.image %></li>
+<%=link_to seller.name, seller_path(seller) %>
 <%end%>
 </ul>
-
-<div class="row">
-  <div class="column">
-    <img src="img_snow.jpg" alt="Snow" style="width:50%">
-  </div>
-  <div class="column">
-    <img src="img_forest.jpg" alt="Forest" style="width:50%">
-  </div>
-  <div class="column">
-    <img src="img_mountains.jpg" alt="Mountains" style="width:50%">
-  </div>
-</div>
-</div>

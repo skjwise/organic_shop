@@ -49,19 +49,11 @@ Product.create(name: 'Apples', price: 2, image: 'https://images.unsplash.com/pho
 Product.create(name: 'Grapes', price: 1, image: 'https://images.unsplash.com/photo-1537640538966-79f369143f8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80', seller_id: Seller.all.sample.id)
 Product.create(name: 'Lemons', price: 2, image: 'https://images.unsplash.com/photo-1432457990754-c8b5f21448de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80', seller_id: Seller.all.sample.id)
 Product.create(name: 'Corn', price: 3, image: 'https://images.unsplash.com/photo-1551754655-cd27e38d2076?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80', seller_id: Seller.all.sample.id)
-<<<<<<< HEAD
 Product.create(name: 'Oranges', price: 1, image: 'https://images.unsplash.com/photo-1556011278-4c3803c0e5e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80', seller_id: Seller.all.sample.id)
 Product.create(name: 'Bananas', price: 2, image: 'https://images.unsplash.com/photo-1523667864248-fc55f5bad7e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80', seller_id: Seller.all.sample.id)
 Product.create(name: 'Strawberries', price: 3, image: 'https://images.unsplash.com/photo-1543528176-61b239494933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80', seller_id: Seller.all.sample.id)
 Product.create(name: 'Eggs', price: 1, image: 'https://images.unsplash.com/photo-1509479100390-f83a8349e79c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80', seller_id: Seller.all.sample.id)
 Product.create(name: 'Rhubard', price: 2, image: 'https://images.unsplash.com/photo-1523539333365-83d5eda6c32f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80', seller_id: Seller.all.sample.id)
-=======
-Product.create(name: 'Oranges', price: 2, image: 'https://images.unsplash.com/photo-1556011278-4c3803c0e5e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80', seller_id: Seller.all.sample.id)
-# Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
-# Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
-# Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
-# Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
->>>>>>> 7f6c1768eb4767f066bc1ea765cba975ba929e1b
 
 
 # Order.create(user_id: User.first.id)
