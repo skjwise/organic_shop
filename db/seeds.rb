@@ -13,9 +13,12 @@ Product.destroy_all
 
 Seller.create(name: 'mandy johnson', email: 'fields@gmaill.com', image: 'https://www.riverford.co.uk/media/about-us/kitchen-pantry.jpg', description: 'l
     Our mayonnaise is made in Ashburton, Devon by Mandy and Andy Johnson from Laydilay. They’ve been producing organic eggs since April 2004 with 70 mid lay hens in a small rented orchard in Buckfastleigh.')
+
 Seller.create(name: 'Cropwell Bishop', email: 'pickle@gmaill.com', image: 'https://www.riverford.co.uk/media/about-us/cheese_cropwell_bishop_stilton.jpg', description: '
     Our stilton cheese comes from Luke Chapman at Cropwell Bishop Creamery in the Vale of Belvoir, eight miles from Nottingham.')
-Seller.create(name: 'Andy Hayllor', email: 'andy@gmail.com', image: 'https://www.riverford.co.uk/media/about-us/andy_haylor.jpg ', description: 'One of Guy Watson’s neighbours is Andy Hayllor, who farms around 800 acres of the rolling south Devon hills and supplies Riverford with a wide range of veg for their boxes as well as free-range organic chickens for the table')
+
+Seller.create(name: 'Andy Hayllor', email: 'andy@gmail.com', image: 'https://www.riverford.co.uk/media/about-us/andy_haylor.jpg', description: 'One of Guy Watson’s neighbours is Andy Hayllor, who farms around 800 acres of the rolling south Devon hills and supplies Riverford with a wide range of veg for their boxes as well as free-range organic chickens for the table')
+
 Seller.create(name: 'Anthony & Mary Lou Coker', email: 'anto@yahoo.com', image: 'https://www.riverford.co.uk/media/about-us/wash-anthony-coker.jpg', description: "The main crops grown at Home Park Farm are the great Brussels sprouts we provide at Christmas, kale, parsnips, leeks, squash and courgettes. He loves growing all of them, but the sprouts are his favourite. Anthony claims he wouldn't grow anything he doesn't like to eat and has been working with Guy as part of the South Devon Organic Producer co-op right from the start.")
 Seller.create(name: 'Ian & Alison Samuel', email: 'samuel.yahoo.com', image: 'https://www.riverford.co.uk/media/about-us/wash-ian-and-alison.jpg', description: 'They run a traditional mixed farm, with both livestock and vegetables, which minimises outside inputs because the muck from the stock can be used to fertilise the crops, and the crops feed the animals.Alongside fields of carrots, cabbages, purple sprouting broccoli, beetroot, leaks and broad beans – all of which find their way into the boxes - they have a small beef fattening herd and some free-range chickens')
 Seller.create(name: 'Peter Richardson - Home Farm', email: 'farms@hotmail.com', image: 'https://www.riverford.co.uk/media/about-us/home-peter-richardson.jpg', description: 'The key to success is being strict about crop rotation. “With conventional farming, you could plant potatoes in the same place every three years but with organic methods it’s once every seven years. You don’t want the pests and soil-borne diseases.')
@@ -46,11 +49,19 @@ Product.create(name: 'Apples', price: 2, image: 'https://images.unsplash.com/pho
 Product.create(name: 'Grapes', price: 1, image: 'https://images.unsplash.com/photo-1537640538966-79f369143f8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80', seller_id: Seller.all.sample.id)
 Product.create(name: 'Lemons', price: 2, image: 'https://images.unsplash.com/photo-1432457990754-c8b5f21448de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80', seller_id: Seller.all.sample.id)
 Product.create(name: 'Corn', price: 3, image: 'https://images.unsplash.com/photo-1551754655-cd27e38d2076?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80', seller_id: Seller.all.sample.id)
+<<<<<<< HEAD
+Product.create(name: 'Oranges', price: 1, image: 'https://images.unsplash.com/photo-1556011278-4c3803c0e5e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80', seller_id: Seller.all.sample.id)
+Product.create(name: 'Bananas', price: 2, image: 'https://images.unsplash.com/photo-1523667864248-fc55f5bad7e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80', seller_id: Seller.all.sample.id)
+Product.create(name: 'Strawberries', price: 3, image: 'https://images.unsplash.com/photo-1543528176-61b239494933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80', seller_id: Seller.all.sample.id)
+Product.create(name: 'Eggs', price: 1, image: 'https://images.unsplash.com/photo-1509479100390-f83a8349e79c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80', seller_id: Seller.all.sample.id)
+Product.create(name: 'Rhubard', price: 2, image: 'https://images.unsplash.com/photo-1523539333365-83d5eda6c32f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80', seller_id: Seller.all.sample.id)
+=======
 Product.create(name: 'Oranges', price: 2, image: 'https://images.unsplash.com/photo-1556011278-4c3803c0e5e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80', seller_id: Seller.all.sample.id)
 # Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
 # Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
 # Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
 # Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
+>>>>>>> 7f6c1768eb4767f066bc1ea765cba975ba929e1b
 
 
 # Order.create(user_id: User.first.id)
