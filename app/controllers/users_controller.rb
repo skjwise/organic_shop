@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  def index
+    redirect_to sellers_path
+  end
+  
   def new
     @user = User.new
   end

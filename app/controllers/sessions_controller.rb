@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
         redirect_to sellers_path
         
     else 
-        flash[:notice] = "Sorry, these user details does not exists"
+        flash[:notice] = "Sorry, these user details do not exist"
         redirect_to '/login'
       end
   end
