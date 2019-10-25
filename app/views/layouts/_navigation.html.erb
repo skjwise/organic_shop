@@ -35,6 +35,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
             <% else %>
             <a class="btn btn-default pull-right" href="/logout" role="button" value="delete">Logout</a>
             <a class="btn btn-default pull-right" href="/history" role="button" value="delete">Order History</a>
+            <%= link_to 'Edit profile', edit_user_path(current_user.id) %>
             <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
             <%= link_to "Cart (#{current_cart.length})", cart_path(current_cart)%><br> 
         <% end %>

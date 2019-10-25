@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get '/logout', to: 'sessions#destroy'
 
+
   delete '/remove/:id', to: 'order_items#destroy', as: 'remove'
 
   root to: 'sellers#index'
