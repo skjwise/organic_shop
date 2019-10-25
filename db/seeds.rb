@@ -11,10 +11,6 @@ User.destroy_all
 Seller.destroy_all
 Product.destroy_all
 
-
-User.create(username: 'Sarah', password: "password1", email: 'one@gmail.com' )
-User.create(username: 'Ilita', password: "password2", email: 'two@gmail.com' )
-
 Seller.create(name: 'mandy johnson', email: 'fields@gmaill.com', image: 'https://www.riverford.co.uk/media/about-us/kitchen-pantry.jpg', description: 'l
     Our mayonnaise is made in Ashburton, Devon by Mandy and Andy Johnson from Laydilay. They’ve been producing organic eggs since April 2004 with 70 mid lay hens in a small rented orchard in Buckfastleigh.')
 Seller.create(name: 'Cropwell Bishop', email: 'pickle@gmaill.com', image: 'https://www.riverford.co.uk/media/about-us/cheese_cropwell_bishop_stilton.jpg', description: '
@@ -51,18 +47,18 @@ Product.create(name: 'Grapes', price: 1, image: 'https://images.unsplash.com/pho
 Product.create(name: 'Lemons', price: 2, image: 'https://images.unsplash.com/photo-1432457990754-c8b5f21448de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80', seller_id: Seller.all.sample.id)
 Product.create(name: 'Corn', price: 3, image: 'https://images.unsplash.com/photo-1551754655-cd27e38d2076?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80', seller_id: Seller.all.sample.id)
 Product.create(name: 'Oranges', price: 2, image: 'https://images.unsplash.com/photo-1556011278-4c3803c0e5e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80', seller_id: Seller.all.sample.id)
-Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
-Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
-Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
-Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
+# Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
+# Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
+# Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
+# Product.create(name: '', price: 2, image: '', seller_id: Seller.all.sample.id)
 
 
-Order.create(user_id: User.first.id)
-Order.create(user_id: User.last.id)
+# Order.create(user_id: User.first.id)
+# Order.create(user_id: User.last.id)
 
 
-OrderItem.create( order_id: Order.first.id, product_id: Product.first.id)
-OrderItem.create( order_id: Order.last.id, product_id: Product.last.id)
+# OrderItem.create( order_id: Order.first.id, product_id: Product.first.id)
+# OrderItem.create( order_id: Order.last.id, product_id: Product.last.id)
 
 
 
