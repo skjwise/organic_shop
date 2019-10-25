@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get '/cart', to: 'carts#show', as: 'cart'
   post '/cart', to: 'carts#checkout'
   get '/pay', to: 'orders#pay'
+  get '/history', to: 'orders#history'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

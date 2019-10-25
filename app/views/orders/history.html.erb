@@ -1,0 +1,14 @@
+
+  <div class="well">
+  <div class="row">
+  <div class="col-xs-8">
+
+  <div><h3 class="text-center">Previous orders:<br><br>
+  <% @order.products.each do |product| %>
+  <h4 class="text-center"> <div><%= product.name %>
+  <%end%>
+
+
+  </div>
+  </div>
+  </div>

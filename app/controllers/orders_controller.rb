@@ -8,7 +8,8 @@ class OrdersController < ApplicationController
   def new
   end
 
-  def create
+  def history
+    @order = Order.find_by(user_id:current_user.id)
   end
 
 end

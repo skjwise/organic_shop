@@ -24,7 +24,7 @@ class CartsController < ApplicationController
 
         products.each do |product|
         @cart = OrderItem.create(order_id: @order.id, product_id: product.id, quantity: 1)
-        # byebug
+        
         end
        redirect_to order_path(@order.id)
     end

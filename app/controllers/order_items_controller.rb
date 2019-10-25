@@ -5,8 +5,9 @@ class OrderItemsController < ApplicationController
   end
 
   def create
+    byebug
     @order_item = OrderItem.create(order_item_params)
-
+    
   end
 
 
