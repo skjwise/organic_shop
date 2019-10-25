@@ -12,17 +12,26 @@
   </div>
 <% end %>
 
+  <div class="well">
+  <div class="row">
+    <div class="col-xs-8">
+    <div><h4 class="text-center">
 
 <%= form_for @user do |f| %>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
+    <h4 class="text-center"><%= f.label :username %></h4>
+    <h4 class="text-center"><%= f.text_field :username %></h4>
 
-    <%= f.label :password %>
-    <%= f.password_field :password%>
+    <h4 class="text-center"><%= f.label :password %></h4>
+    <h4 class="text-center"><%= f.password_field :password%></h4>
 
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+    <h4 class="text-center"><%= f.label :email %></h4>
+    <h4 class="text-center"><%= f.text_field :email %></h4>
 
-    <%= f.submit %>
+    <h4 class="text-center"><%= f.submit 'Submit'%></h4>
 <% end %>
+ </div>
+   </div>
+  </div>
+</div>
+
 

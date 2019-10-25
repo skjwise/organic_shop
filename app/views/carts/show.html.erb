@@ -1,5 +1,9 @@
 
-<h1>Your ordered goodies here:</h1>
+<div class="well">
+  <div class="row">
+    <div class="col-xs-8">
+
+<div><h3 class="text-center"><h1>Your ordered goodies here:</h3>
 <% if @order_items.any? %>
     <% @order_items.each do |item|%>
     <p><%=item.name%> | <%=link_to 'Remove', remove_path(item), :method => "delete" %>
@@ -11,4 +15,8 @@
 <%# <%= link_to 'Confirm Order', order_path() %> 
 
 <%= button_to 'Checkout'%>
-<h5>Thank You for shopping!</h5>
+  </div>
+  </div>
+</div>
+
+
