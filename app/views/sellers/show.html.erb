@@ -11,14 +11,10 @@
   <h4 class="text-right"><%= product.name %><br>
   <h4 class="text-right">Unit Price: £  <span style="color: green"><%= product.price %>.00</span></h4>
    <div class="input-group">
-
-   
-    <h4 class="text-right">Quantity <%= number_field :quantity, value: 1, class: "form-control", min: 1 , max: 5%>
-    <%# <%= hidden_field :order_item, value: quantity %> 
-
-  <h4 class="text-right"><%= button_to "Add to cart", "/add_to_cart", method: :post, params: { product_id: product.id } %>
-  <%= image_tag product.image, style: 'height:10%; width:20%;' %>
-  <% end %><br><br>
+    <h4 class="text-right">Quantity <%= number_field_tag 'quantity', nil,   within: 1..10%>
+    <h4 class="text-right"><%= button_to "Add to cart", "/add_to_cart", method: :post, params: { product_id: product.id } %>
+    <%= image_tag product.image, style: 'height:10%; width:20%;' %>
+    <% end %><br><br>
   <h5>Contact:<%=@seller.email%></h5>
     
      </div>
