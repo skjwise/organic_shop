@@ -1,13 +1,15 @@
 
-
-<h1>Login</h1>
+ <div class="well">
+  <div class="row">
+    <div class="col-xs-8">
+<div><h3 class="text-center"><b>Login</b></h3>
 
 <%= form_tag '/login' do %>
-    <%= label :user, :email  %>
-    <%= text_field :user, :email %>
-    <%= label :user, :password %>
-    <%= password_field :user, :password %>
-    <label><input type="checkbox"> Remember me</label><br><br>
-    <%= submit_tag "Login" %>
+    <div><h4 class="text-center"><%= label :user, :email  %></h4>
+    <div><h4 class="text-center"><%= text_field :user, :email %></h4>
+    <div><h4 class="text-center"><%= label :user, :password %></h4>
+    <div><h4 class="text-center"><%= password_field :user, :password %></h4>
+    <div><h4 class="text-center"><label><input type="checkbox"> Remember me</label><br><br></h4>
+    <div><h4 class="text-center"><%= submit_tag "Login" %></h4>
 <% end %>
 
